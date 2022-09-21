@@ -38,33 +38,33 @@ def draw_message(message, font_size, color, location):
     text_img = font.render(message, True, color)
     WIN.blit(text_img, location)
 
-# def draw_game(game_state):
-#     draw_board()
-#     if game_state["pressed_key_enter"]:
-#         draw_grid()
-#         time.sleep(1)
+def draw_game(game_state):
+    draw_board()
+    if game_state["pressed_key_enter"]:
+        draw_grid()
+        time.sleep(1)
+
+    elif game_state["state"] == consts.LOSE_STATE:
+        draw_lose_message()
+        time.sleep(3)
+
+    elif game_state["state"] == consts.WIN_STATE:
+        draw_win_message()
+        time.sleep(3)
+
+    pygame.display.flip()
+
+
+
+# def main():
+#     run = True
+#     while run:
+#         for event in pygame.event.get():
+#             if event.type == pygame.QUIT:
+#                 run = False
+#         draw_board()
 #
-#     elif game_state["state"] == consts.LOSE_STATE:
-#         draw_lose_message()
-#         time.sleep(3)
+#     pygame.quit()
 #
-#     elif game_state["state"] == consts.WIN_STATE:
-#         draw_win_message()
-#         time.sleep(3)
-#
-#     pygame.display.flip()
-
-
-
-def main():
-    run = True
-    while run:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                run = False
-        draw_board()
-
-    pygame.quit()
-
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
