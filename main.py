@@ -6,3 +6,4 @@ state = {
     "num of mistakes": 0,
     "player_location": [6, 0]
 }
+
