@@ -3,7 +3,9 @@ import pygame
 import Screen
 import board_grid
 import consts
+import functions
 import player
+import questions
 
 state = {
     "is_window_open": True,
@@ -16,7 +18,8 @@ grid = board_grid.returned_initialized_grid()
 
 def main():
     pygame.init()
-    main_player = player.player()
+    player_temp = player.player()
+    main_player = pygame.Rect(player_temp["position_x"], player_temp["position_y"], player_temp["width"], player_temp["height"])
 
     while state["is_window_open"]:
         handle_user_events(main_player)
@@ -42,11 +45,15 @@ def handle_user_events(main_player):
             continue
 
         if keys_pressed[pygame.K_RETURN]:
-            main_player.x
+            dice_roll = 5
+            main_player.x += dice_roll * 100
+            questions.question1()
 
         # need randomized and present question if question not presented in 3 times
 
 
+def move_player_after_dice_roll():
+    dice_roll = functions.random_dice()
 
 
 def compare_lists_locations(list1, list2):
