@@ -8,10 +8,10 @@ pygame.display.set_caption("SNAKES AND LADDERS")
 
 pygame.font.init()
 
-def draw_board():
+def draw_board(player1):
     WIN.fill(consts.WHITE)
     WIN.blit(consts.GAME_BOARD, (0, 0))
-    WIN.blit(consts.PLAYER_RIGHT, (0, 600))
+    WIN.blit(consts.PLAYER_RIGHT, (player1.x, player1.y))
     pygame.display.update()
 
 def draw_grid():
@@ -38,13 +38,12 @@ def draw_message(message, font_size, color, location):
     text_img = font.render(message, True, color)
     WIN.blit(text_img, location)
 
-def draw_game(game_state):
-    draw_board()
-    if game_state["pressed_key_enter"]:
-        draw_grid()
-        time.sleep(1)
+def draw_game(game_state,player1):
+    draw_board(player1)
+    # if game_state["pressed_key_enter"]:
+    #     draw_grid()
 
-    elif game_state["state"] == consts.LOSE_STATE:
+    if game_state["state"] == consts.LOSE_STATE:
         draw_lose_message()
         time.sleep(3)
 

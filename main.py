@@ -32,7 +32,7 @@ def main():
             state["state"] = consts.WIN_STATE
             state["is_window_open"] = False
 
-        Screen.draw_game(state)
+        Screen.draw_game(state,main_player)
 
 
 def handle_user_events(main_player):
@@ -46,7 +46,10 @@ def handle_user_events(main_player):
 
         if keys_pressed[pygame.K_RETURN]:
             dice_roll = 5
-            main_player.x += dice_roll * 100
+            main_player.x += (dice_roll-1) * 100
+            Screen.WIN.blit(consts.PLAYER_RIGHT, (main_player.x, main_player.y))
+            pygame.display.flip()
+            pygame.display.update()
             questions.question1()
 
         # need randomized and present question if question not presented in 3 times

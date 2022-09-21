@@ -14,23 +14,23 @@ PLAYER_RIGHT = pygame.transform.scale(PLAYER_IMAGE_RIGHT, (100,100))
 PLAYER_IMAGE_LEFT = pygame.image.load(os.path.join('Assets', 'player_left.png'))
 PLAYER_LEFT = pygame.transform.scale(PLAYER_IMAGE_RIGHT, (100,100))
 
-DICE1_IMAGE = pygame.image.load(os.path.join('dice', 'dice1.jpg'))
-DICE1 = pygame.transform.scale(DICE1_IMAGE, (100,100))
-
-DICE2_IMAGE = pygame.image.load(os.path.join('dice', 'dice2.jpg'))
-DICE2 = pygame.transform.scale(DICE2_IMAGE, (100,100))
-
-DICE3_IMAGE = pygame.image.load(os.path.join('dice', 'dice3.jpg'))
-DICE3 = pygame.transform.scale(DICE3_IMAGE, (100,100))
-
-DICE4_IMAGE = pygame.image.load(os.path.join('dice', 'dice4.jpg'))
-DICE4 = pygame.transform.scale(DICE4_IMAGE, (100,100))
-
-DICE5_IMAGE = pygame.image.load(os.path.join('dice', 'dice5.jpg'))
-DICE5 = pygame.transform.scale(DICE5_IMAGE, (100,100))
-
-DICE6_IMAGE = pygame.image.load(os.path.join('dice', 'dice6.jpg'))
-DICE6 = pygame.transform.scale(DICE6_IMAGE, (100,100))
+# DICE1_IMAGE = pygame.image.load(os.path.join('dice', 'dice1.jpg'))
+# DICE1 = pygame.transform.scale(DICE1_IMAGE, (100,100))
+#
+# DICE2_IMAGE = pygame.image.load(os.path.join('dice', 'dice2.jpg'))
+# DICE2 = pygame.transform.scale(DICE2_IMAGE, (100,100))
+#
+# DICE3_IMAGE = pygame.image.load(os.path.join('dice', 'dice3.jpg'))
+# DICE3 = pygame.transform.scale(DICE3_IMAGE, (100,100))
+#
+# DICE4_IMAGE = pygame.image.load(os.path.join('dice', 'dice4.jpg'))
+# DICE4 = pygame.transform.scale(DICE4_IMAGE, (100,100))
+#
+# DICE5_IMAGE = pygame.image.load(os.path.join('dice', 'dice5.jpg'))
+# DICE5 = pygame.transform.scale(DICE5_IMAGE, (100,100))
+#
+# DICE6_IMAGE = pygame.image.load(os.path.join('dice', 'dice6.jpg'))
+# DICE6 = pygame.transform.scale(DICE6_IMAGE, (100,100))
 
 
 
