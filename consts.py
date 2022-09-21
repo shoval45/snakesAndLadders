@@ -7,9 +7,11 @@ HEIGHT = 700
 BLACK = (0,0,0)
 WHITE = (255,255,255)
 
-PLAYER_IMAGE_RIGHT = pygame.image.load(os.path.join('Assets', 'snake1.png'))
+GAME_BOARD_IMAGE = pygame.image.load(os.path.join('Assets', 'game_board.jpg'))
+GAME_BOARD = pygame.transform.scale(GAME_BOARD_IMAGE, (700,700))
+PLAYER_IMAGE_RIGHT = pygame.image.load(os.path.join('Assets', 'player_right.png'))
 PLAYER_RIGHT = pygame.transform.scale(PLAYER_IMAGE_RIGHT, (100,100))
-PLAYER_IMAGE_LEFT = pygame.image.load(os.path.join('Assets', 'snake1.png'))
+PLAYER_IMAGE_LEFT = pygame.image.load(os.path.join('Assets', 'player_left.png'))
 PLAYER_LEFT = pygame.transform.scale(PLAYER_IMAGE_RIGHT, (100,100))
 
 
